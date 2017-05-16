@@ -1,0 +1,18 @@
+<!Doctype html>
+<html data-ng-app="">
+<head>
+	<title>Directives and data binding</title>
+</head>
+
+<body data-ng-init="customers=[{name:'on smith',city:'phoenix'},{name:'jon doe',city:'new york'},{name:'aane doe',city:'san francisco'}]">
+Name:
+<br/>
+<input type="text"  data-ng-model="name"/>
+<br/>
+<ul>
+	<li data-ng-repeat="cust in customers |filter :name" | orderBy:"city">
+		{{cust.name |uppercase}}-{{cust.city }}
+</ul>	
+<script src="angular.js"></script>
+</body>
+</html>
